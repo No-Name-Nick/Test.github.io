@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test{
+            font-family: Calibri;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body id="dBody" onload="changeColor()" >
+
+    <p id="test" onload=""></p>
+    <script>
+        
+        const Fonts = ["Helvetica", "Arial", "Verdana", "Tahoma", "Trebuchet MS","Impact","Gill Sans","Georgia","Palatino" ]
+       const Greeting = ["Yo! ","Hi! ","Hello! ","Wassup! "]
+        const Declerative = ["I'm a cool person.","I'm a website.","We live in a society.","This is randomized."]
+        
+        function changeColor() {
+            var RandomNo = Math.round(Math.random() * 8);
+        var RandomGreet = Math.round(Math.random() * 3);
+        var RandomDeclare = Math.round(Math.random() * 3);
+        var RandomSize = Math.random() * 100;
+        document.getElementById('test').style.fontSize = RandomSize;
+        document.getElementById('test').style.fontFamily = Fonts[RandomNo]
+        document.getElementById('test').innerHTML = Greeting[RandomGreet] + Declerative[RandomDeclare]
+            var red = Math.random() * 255;
+            var green = Math.random() * 255;
+            var blue = Math.random() * 255;
+            var dColor = "rgb(" + red + ","+green+","+blue+")";
+            document.getElementById("dBody").style.backgroundColor = dColor;
+            
+        }
+        function one(){
+            console.log("1")
+        }
+    </script>
+</body>
+</html>
